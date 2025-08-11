@@ -109,28 +109,32 @@
   <!-- floating theme switcher -->
   <button id="theme-btn" class="theme-btn" type="button" aria-label="Theme: Light (click to change)" title="Theme: Light"><span id="theme-ico">☀︎</span></button>
 
-  <main class="container">
+   <main class="container">
     <!-- ================= Part I ================= -->
     <section id="pipeline" class="section">
       <h2 class="section-title">Part I — Project Pipeline</h2>
+      <p>
+        From experimental data and literature, linear and nonlinear parameters are estimated, refined in MATLAB, and passed to a user subroutine coupled with an Abaqus model. Simulation results are compared back to experiments to close the loop and update the parameters.
+      </p>
       <figure class="fig">
         <div class="media">
-          <!-- Replace with your file -->
-          <img src="image/pipeline.png" alt="Pipeline: Experimental data & literature → parameter estimation → user subroutine → Abaqus model → simulation results with comparison loop">
+          <img src="image/pipeline.png" alt="Pipeline: Experimental data → linear & nonlinear parameters → user subroutine → Abaqus model → simulation results ↔ comparison with experiments">
         </div>
-        <figcaption class="cap">End-to-end pipeline from data to Abaqus simulations via a user subroutine.</figcaption>
+        <figcaption class="cap">End-to-end pipeline used in this project.</figcaption>
       </figure>
     </section>
-
+  
     <!-- ================= Part II ================= -->
     <section id="algorithm" class="section">
       <h2 class="section-title">Part II — Damped Newton Optimization</h2>
+      <p>
+        To ensure stable yet fast convergence, a damped Newton strategy updates key parameters by iterating over temperature profiles, computing final densities, evaluating the error against experiments, and compensating the error via an intuitive control loop or a damped Newton step until the outer loop converges.
+      </p>
       <figure class="fig">
         <div class="media">
-          <!-- Replace with your file -->
-          <img src="image/damped_newton.png" alt="Flowchart of the damped Newton parameter-identification algorithm">
+          <img src="image/damped_newton.png" alt="Flowchart of the damped Newton parameter-optimization loop with inner and outer stopping criteria">
         </div>
-        <figcaption class="cap">Flowchart of the damped Newton–based parameter identification.</figcaption>
+        <figcaption class="cap">Flowchart of the damped Newton–based parameter identification algorithm.</figcaption>
       </figure>
     </section>
   </main>
