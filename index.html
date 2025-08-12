@@ -118,7 +118,7 @@
       </p>
       <figure class="fig">
         <div class="media">
-          <img src="image/pipeline.png" alt="Pipeline: Experimental data → linear & nonlinear parameters → user subroutine → Abaqus model → simulation results ↔ comparison with experiments">
+          <img src="image/fe_pipeline.png" alt="Pipeline: Experimental data → linear & nonlinear parameters → user subroutine → Abaqus model → simulation results ↔ comparison with experiments">
         </div>
         <figcaption class="cap">End-to-end pipeline used in this project.</figcaption>
       </figure>
@@ -130,12 +130,6 @@
       <p>
         To ensure stable yet fast convergence, a damped Newton strategy updates key parameters by iterating over temperature profiles, computing final densities, evaluating the error against experiments, and compensating the error via an intuitive control loop or a damped Newton step until the outer loop converges.
       </p>
-      <figure class="fig">
-        <div class="media">
-          <img src="image/damped_newton.png" alt="Flowchart of the damped Newton parameter-optimization loop with inner and outer stopping criteria">
-        </div>
-        <figcaption class="cap">Flowchart of the damped Newton–based parameter identification algorithm.</figcaption>
-      </figure>
     </section>
   </main>
 
